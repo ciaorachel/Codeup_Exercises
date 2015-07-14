@@ -18,7 +18,7 @@ if (is_numeric($b) && is_numeric($c) && is_numeric($d)) {
 	}
 
 } else {
-	fwrite(STDOUT, 'Not valid input. Start over... ');
+	fwrite(STDOUT, 'Not valid input. Only enter numbers when prompted. Please start over... ');
 }
 
 ?>
