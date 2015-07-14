@@ -12,7 +12,13 @@ foreach ($things as $thing) {
 }
 }
 
+
 /*
+foreach ($things as $key => $thing) {
+    echo "The thing at index $key is $thing\n";
+}
+
+
 // Evaluates data type of each element
 foreach($things as $thing) {
 	if (is_int($thing)) {
