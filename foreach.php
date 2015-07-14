@@ -1,10 +1,19 @@
 <?php 
 
-//Construct a loop that iterates through each value and outputs its type as either integer, float, boolean, array, null, or string.
-
 $things = array('Sgt. Pepper', "11", null, array(1,2,3), 3.14, "12 + 7", false, (string) 11);
 
+
+foreach ($things as $thing) {
+	if (is_array($thing)) {
+		echo implode (', ', $thing) . PHP_EOL;
+		}
+	else {
+		echo "{$thing}\n";
+}
+}
+
 /*
+// Evaluates data type of each element
 foreach($things as $thing) {
 	if (is_int($thing)) {
 		echo "Integer\n";
@@ -23,6 +32,7 @@ foreach($things as $thing) {
 	}
 }
 
+// Evaluates whether each is scalar
 foreach($things as $thing) {
 	if (is_scalar($thing)) {
 		echo "{$thing} is a scalar\n";
@@ -30,24 +40,8 @@ foreach($things as $thing) {
 		echo "{$thing} is not a scalar\n";
 	}
 }
+*/
 
-foreach($things as $thing) {
-	if (is_scalar($thing)) {
-		echo "{$thing} is a scalar\n";
-	} else {
-		echo "{$thing} is not a scalar\n";
-	}
-}*/
 
-foreach ($things as $thing) {
-	if (is_array($thing)) {
-		/*foreach ($thing as $element) {
-			echo "{$element} is an element in an array";*/
-		echo implode (', ', $thing) . PHP_EOL;
-		}
-	else {
-		echo "{$thing}\n";
-}
-}
 
 ?>
