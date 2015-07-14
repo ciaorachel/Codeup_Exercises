@@ -4,23 +4,50 @@
 
 $things = array('Sgt. Pepper', "11", null, array(1,2,3), 3.14, "12 + 7", false, (string) 11);
 
+
 foreach($things as $thing) {
 	if (is_int($thing)) {
-		echo "{$thing} is an integer\n";
+		echo "Integer\n";
 	} elseif (is_float($thing)) {
-		echo "{$thing} is a float\n";
+		echo "Float\n";
 	} elseif (is_bool($thing)) {
-		echo "{$thing} is a boolean\n";
+		echo "Boolean\n";
 	} elseif (is_array($thing)) {
-		echo "{$thing} is an array\n";
+		echo "Array\n";
 	} elseif (is_null($thing)) {
-		echo "{$thing} is null\n";
+		echo "Null\n";
 	} elseif (is_string($thing)) {
-		echo "{$thing} is a string\n";
+		echo "String\n";
 	} else {
 		echo "{$thing} is none of the above\n";
 	}
 }
 
+foreach($things as $thing) {
+	if (is_scalar($thing)) {
+		echo "{$thing} is a scalar\n";
+	} else {
+		echo "{$thing} is not a scalar\n";
+	}
+}
+
+foreach($things as $thing) {
+	if (is_scalar($thing)) {
+		echo "{$thing} is a scalar\n";
+	} else {
+		echo "{$thing} is not a scalar\n";
+	}
+}
+
+foreach ($things as $thing) {
+	if (is_array($thing)) {
+		/*foreach ($thing as $element) {
+			echo "{$element} is an element in an array";*/
+		echo implode (', ', $thing) . PHP_EOL;
+		}
+	else {
+		echo "{$thing}\n";
+}
+}
 
 ?>
