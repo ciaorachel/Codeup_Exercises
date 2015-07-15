@@ -9,27 +9,32 @@ function add($a, $b)
 }
 
 echo add($x, $y) . PHP_EOL;
-echo add(3, 4) . PHP_EOL;
+echo add(6, 4) . PHP_EOL;
 
 function subtract($a, $b)
 {
     return $a - $b;
 }
 echo subtract($x, $y) . PHP_EOL;
-echo subtract(3, 4) . PHP_EOL;
+echo subtract(6, 4) . PHP_EOL;
 
 function multiply($a, $b)
 {
     return $a * $b;
 }
 echo multiply($x, $y) . PHP_EOL;
-echo multiply(3, 4) . PHP_EOL;
+echo multiply(6, 4) . PHP_EOL;
 
 function divide($a, $b)
 {
     return $a / $b;
 }
 echo divide($x, $y) . PHP_EOL;
-echo divide(3, 4) . PHP_EOL;
+echo divide(6, 4) . PHP_EOL;
 
-// Add code to test your functions here
+function modulus($a, $b)
+{
+	return $a % $b;
+}
+echo modulus($x, $y) . PHP_EOL;
+echo modulus(6, 4) . PHP_EOL;
