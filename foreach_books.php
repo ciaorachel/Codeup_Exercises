@@ -1,6 +1,5 @@
 <?php 
 
-
 $books = array(
     'The Hobbit' => array(
         'published' => 1937,
@@ -33,15 +32,5 @@ foreach ($books as $book => $info) {
 			echo "$value" . PHP_EOL;
 		}
 }
-	
-
-/*foreach ($books as $title => $bookDetails) {
-	echo "$title" . PHP_EOL;
-		foreach ($bookDetails as $detail => $value) {
-		echo "$detail is $value" . PHP_EOL;
-		}
-	}*/
-
-
 
 ?>
