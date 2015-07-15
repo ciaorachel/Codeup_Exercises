@@ -25,16 +25,13 @@ $books = array(
 
 // This one echoes each title and and book detail
 foreach ($books as $book => $info) {
-	//var_dump($books) . PHP_EOL;
 	echo "$book" . PHP_EOL;		
 	foreach ($info as $key => $value) {
-		//echo($info['author']) . PHP_EOL;
-		//echo($info['pages']) . PHP_EOL;
-		//var_dump($value) . PHP_EOL;
 		echo "$key: $value" . PHP_EOL;
 	}
 echo "......................" . PHP_EOL;	
 }
+
 
 // This one echoes the sentence below for books published after 1950
 foreach ($books as $book => $info) {
@@ -44,7 +41,7 @@ foreach ($books as $book => $info) {
 	echo "{$book}, written by author {$info['author']} in {$info['published']}, is pages {$info['pages']} long." . PHP_EOL;
 	echo "......................" . PHP_EOL;
  
-		}
+	}
 }
 
 
