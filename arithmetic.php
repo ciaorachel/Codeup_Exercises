@@ -3,6 +3,9 @@
 $x = 2;
 $y = 1;
 
+$a = 5;
+$b = 10;
+
 function add($a, $b)
 {
     return $a + $b;
@@ -10,6 +13,7 @@ function add($a, $b)
 
 echo add($x, $y) . PHP_EOL;
 echo add(6, 4) . PHP_EOL;
+echo add($b, 3) . PHP_EOL;
 
 function subtract($a, $b)
 {
@@ -17,6 +21,7 @@ function subtract($a, $b)
 }
 echo subtract($x, $y) . PHP_EOL;
 echo subtract(6, 4) . PHP_EOL;
+echo subtract($a, $y) . PHP_EOL;
 
 function multiply($a, $b)
 {
