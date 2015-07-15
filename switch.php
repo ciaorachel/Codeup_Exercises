@@ -6,7 +6,6 @@ date_default_timezone_set('America/Chicago');
 // Get Day of Week as number
 // 1 (for Monday) through 7 (for Sunday)
 $dayOfWeek = date('N');
-//echo $dayOfWeek . PHP_EOL;
 
 switch($dayOfWeek) {
     case 1:
@@ -30,6 +29,26 @@ switch($dayOfWeek) {
     case 7:
     	echo "Sunday\n";
     	break;
+}
+
+
+//Here's the corresponding if-else, added for comparison per exercise
+$dayOfWeek = date('N');
+
+if ($dayOfWeek == 1) {
+	echo "Monday\n";
+} elseif ($dayOfWeek == 2) {
+	echo "Tuesday\n";
+} elseif ($dayOfWeek == 3) {
+	echo "Wednesday\n";
+} elseif ($dayOfWeek == 4) {
+	echo "Thursday\n";
+} elseif ($dayOfWeek == 5) {
+	echo "Friday\n";
+} elseif ($dayOfWeek == 6) {
+	echo "Saturday\n";
+} elseif ($dayOfWeek == 7) {
+	echo "Sunday\n";
 }
 
 ?>
