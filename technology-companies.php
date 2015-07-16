@@ -1,5 +1,6 @@
 <?php
 
+
 $companies = [
     'Sun Microsystems' => [
         'Vinod Khosla',
@@ -45,7 +46,8 @@ $companies = [
     ]
 ];
 
-
+//Add code to output the $companies array in its current form.
+print_r($companies);
 
 
 ?>
