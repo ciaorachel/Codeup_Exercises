@@ -47,7 +47,9 @@ $companies = [
 ];
 
 //Add code to output the $companies array in its current form.
+//print_r($companies);
+
+//Sort the $companies array by company name and output the results.
+ksort($companies);
 print_r($companies);
-
-
 ?>
