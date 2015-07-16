@@ -6,7 +6,7 @@ function inspect($a) {
 		case 'integer':
 			switch (empty($a)) {
 				case 'empty':
-					return "The integer is empty." . PHP_EOL;
+					return "The integer is empty. (Value is: $a)" . PHP_EOL;
 					break;
 				default: 
 					return "The integer is: $a." . PHP_EOL;
@@ -16,7 +16,7 @@ function inspect($a) {
 		case 'double':
 			switch (empty($a)) {
 				case 'empty':
-					return "The float is empty." . PHP_EOL;
+					return "The float is empty. (Value is: $a)" . PHP_EOL;
 					break;
 				default: 
 					return "The float value is: $a." . PHP_EOL;
