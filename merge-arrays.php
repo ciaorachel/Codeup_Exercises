@@ -7,16 +7,16 @@ $compare = ['Tina', 'Dean', 'Mel', 'Amy', 'Michael'];
 //Write a function called combine_arrays() that will take in two array values and return a new array with values from both.
 // use a combination of array_shift() & array_push() or array_pop() & array_unshift().
 
-function combine_arrays($names, $compare) {
+function combine_arrays($array1, $array2) {
 	$combinedArray = [];
-	foreach ($names as $nameValue) {
-		$compareValue = array_shift($compare);
-		if ($nameValue == $compareValue) {
-			array_push($combinedArray, $nameValue);
+	foreach ($array1 as $array1Value) {
+		$array2Value = array_shift($array2);
+		if ($array1Value == $array2Value) {
+			array_push($combinedArray, $array1Value);
 		}
-		if ($nameValue !== $compareValue) {
-			array_push($combinedArray, $nameValue);
-			array_push($combinedArray, $compareValue);
+		if ($array1Value !== $array2Value) {
+			array_push($combinedArray, $array1Value);
+			array_push($combinedArray, $array2Value);
 		}
 	}
 	print_r($combinedArray);	
