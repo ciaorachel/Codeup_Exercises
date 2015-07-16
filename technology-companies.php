@@ -57,12 +57,22 @@ $companies = [
 ksort($companies);
 foreach ($companies as $company => $personnel) {
     sort($personnel);
+    $companies[$company] = $personnel;
+}
+print_r($companies) . PHP_EOL;
+
+/*
+// MY FIRST ATTEMPT - THIS WORKED BUT WAS NOT THE ANSWER PRESENTED TO CLASS
+ksort($companies);
+foreach ($companies as $company => $personnel) {
+    sort($personnel);
     echo $company . PHP_EOL;
     print_r($personnel) . PHP_EOL;
     echo "......................" . PHP_EOL;
-}
+}*/
 
-
-
+//Sort the companies from "biggest" to "smallest". This may be easier than you think, but be sure you don't loose the company names!
+arsort($companies);
+print_r($companies) . PHP_EOL;
 
 ?>
