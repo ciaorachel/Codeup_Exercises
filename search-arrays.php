@@ -26,9 +26,6 @@ function compareArrays($array1, $array2) {
 		$result = array_search($array1Value, $array2);
 		if ($result !== false) {
 			$totalInCommon += 1;
-			//return TRUE;
-		} else {
-			//return FALSE;
 		}
 	}
 	echo $totalInCommon . PHP_EOL; 
