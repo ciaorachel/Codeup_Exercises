@@ -28,11 +28,10 @@ function compareArrays($array1, $array2) {
 			$totalInCommon += 1;
 		}
 	}
-	echo $totalInCommon . PHP_EOL; 
 	return $totalInCommon;
 }
 	
-compareArrays($names, $compare);
+print_r(compareArrays($names, $compare)) . PHP_EOL;
 
 
 ?>
