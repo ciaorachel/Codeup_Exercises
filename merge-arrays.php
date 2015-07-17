@@ -1,8 +1,8 @@
 <?php
 
-$names = ['Tina', 'Dana', 'Mike', 'Amy', 'Adam'];
+$names = ['Tina', 'Dana', 'Mike', 'Amy', 'Adam', 'Jordan', 'Matt'];
 
-$compare = ['Tina', 'Dean', 'Mel', 'Amy', 'Michael'];
+$compare = ['Tina', 'Dean', 'Mel', 'Amy', 'Michael', 'Jordan'];
 
 //Write a function called combine_arrays() that will take in two array values and return a new array with values from both.
 // use a combination of array_shift() & array_push() or array_pop() & array_unshift().
