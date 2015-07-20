@@ -52,7 +52,7 @@ function list_cars ($cars) {
 }
 
 function trueOrFalse ($carDetails) {
-	if ($carDetails == true) {
+	if ($carDetails === true) {
 		echo "yes";
 	} else {
 		echo "N/A";
