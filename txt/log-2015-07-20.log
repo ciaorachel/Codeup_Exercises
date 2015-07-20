@@ -6,3 +6,22 @@
 2015-07-20 1437406503 ERROR This is an error message.
 2015-07-20 10:35:31 INFO This is an info message.
 2015-07-20 10:35:31 ERROR This is an error message.
+2015-07-20 17:40:07 INFO This is an info message.
+2015-07-20 17:40:07 ERROR This is an error message.
+2015-07-20 10:45:39 INFO This is an info message.
+2015-07-20 10:45:39 ERROR This is an error message.
+2015-07-20 10:46:34 INFO This is an info message.
+2015-07-20 10:46:34 ERROR This is an error message.
+
+todaysDate 11:05:43 [INFO] This is an info message.
+todaysDate 11:05:43 [ERROR] This is an error message.
+2015-07-20 11:05:53 [INFO] This is an info message.
+2015-07-20 11:05:53 [ERROR] This is an error message.
+2015-07-20 11:07:16 [INFO] This is an info message.
+2015-07-20 11:07:16 [ERROR] This is an error message.
+2015-07-20 11:14:41 [error] This is a 405 ERROR
+2015-07-20 11:14:41 [info] it's monday. woohoo!
+2015-07-20 11:15:06 [ERROR] This is a 405 ERROR
+2015-07-20 11:15:06 [INFO] it's monday. woohoo!
+2015-07-20 11:15:38 [ERROR] This is a 405 ERROR
+2015-07-20 11:15:38 [INFO] here's a custom info message. greater reusability. woohoo!
