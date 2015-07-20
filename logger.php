@@ -3,8 +3,11 @@
 date_default_timezone_set('America/Chicago');
 
 function logMessage($logLevel, $message) {
+	//date and time formatting
 	$todaysDate = date('Y-m-d');
 	$timeNow = date('H:i:s');
+
+	//appends string to file if file exists, otherwise new file is created
 	$stringToWrite = "$todaysDate $timeNow [{$logLevel}] $message"; 
 	$filename = 'txt/log-' . $todaysDate . '.log';
 	$handle = fopen($filename, 'a+');
@@ -12,10 +15,7 @@ function logMessage($logLevel, $message) {
 	fclose($handle);
 }
 
-//logMessage("INFO", "This is an info message.") . PHP_EOL;
-//logMessage("ERROR", "This is an error message.") . PHP_EOL;
-
-// Add logInfo() and logError() functions that call logMessage(), passing the appropriate log level values. Replace the calls to logMessage() with calls to the new functions you just created.
+//these logInfo() and logError() functions call logMessage(), passing the appropriate log level values. this allows for custom log messaging, which makes code more reusable.
 
 function logInfo($message) {
 	return logMessage('INFO', $message);
