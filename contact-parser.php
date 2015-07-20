@@ -24,4 +24,4 @@ function formatNumber ($number) {
 	return substr($number, 0, 3) .'-' . substr($number, 3, 3) . '-' . substr($number, 6, 4);
 }
 
-var_dump(parseContacts('contacts.txt'));
+print_r(parseContacts('contacts.txt'));
