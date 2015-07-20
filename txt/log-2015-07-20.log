@@ -25,3 +25,11 @@ todaysDate 11:05:43 [ERROR] This is an error message.
 2015-07-20 11:15:06 [INFO] it's monday. woohoo!
 2015-07-20 11:15:38 [ERROR] This is a 405 ERROR
 2015-07-20 11:15:38 [INFO] here's a custom info message. greater reusability. woohoo!
+2015-07-20 11:22:28 [ERROR] This is a 405 ERROR
+2015-07-20 11:22:28 [INFO] here's a custom info message. greater reusability. woohoo!
+2015-07-20 11:30:14 [ERROR] This is a 405 ERROR
+2015-07-20 11:30:14 [INFO] here's a custom info message. greater reusability. woohoo!
+2015-07-20 11:40:32 [ERROR] This is a 405 ERROR
+2015-07-20 11:40:32 [INFO] here's a custom info message. greater reusability. woohoo!
+2015-07-20 11:41:42 [ERROR] here's the new ERROR message!
+2015-07-20 11:41:42 [INFO] here's the new custom info message!
