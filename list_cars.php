@@ -37,25 +37,23 @@ $cars = array(
 
 function list_cars ($cars) {
 	foreach ($cars as $car => $carDetails) {
-		echo "I own a " . $carDetails['year'] . " $car. Details below:" . PHP_EOL;
-		echo "------------------------------" . PHP_EOL;
-		echo $carDetails['doors'] . "-door " . $carDetails['year'] . " $car" . PHP_EOL;
-		echo "Color: " . $carDetails['color'] . PHP_EOL;
-		echo "Mileage: " . $carDetails['mileage'] . PHP_EOL;
-		echo "Sunroof: ";
-		echo trueOrFalse($carDetails['sunroof']) . PHP_EOL;
-		echo "Convertible: ";
-		echo trueOrFalse($carDetails['convertible']) . PHP_EOL;
-		echo "License No.: " . $carDetails['license'] . PHP_EOL;
-		echo PHP_EOL;
+		print_r("I own a " . $carDetails['year'] . " $car. Details below:" . PHP_EOL);
+		print_r("------------------------------" . PHP_EOL);
+		print_r($carDetails['doors'] . "-door " . $carDetails['year'] . " $car" . PHP_EOL);
+		print_r("Color: " . $carDetails['color'] . PHP_EOL);
+		print_r("Mileage: " . $carDetails['mileage'] . PHP_EOL);
+		print_r("Sunroof: " . trueOrFalse($carDetails['sunroof']) . PHP_EOL);
+		print_r("Convertible: " . trueOrFalse($carDetails['convertible']) . PHP_EOL);
+		print_r("License No.: " . $carDetails['license'] . PHP_EOL);
+		print_r(PHP_EOL);
 	}
 }
 
 function trueOrFalse ($carDetails) {
 	if ($carDetails === true) {
-		echo "yes";
+		return "yes";
 	} else {
-		echo "N/A";
+		return "N/A";
 	}
 }
 
