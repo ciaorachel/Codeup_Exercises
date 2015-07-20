@@ -10,7 +10,7 @@ function logMessage($logLevel, $message) {
 	//appends string to file if file exists, otherwise new file is created
 	$stringToWrite = "$todaysDate $timeNow [{$logLevel}] $message"; 
 	$filename = 'txt/log-' . $todaysDate . '.log';
-	$handle = fopen($filename, 'a+');
+	$handle = fopen($filename, 'a');
 	fwrite($handle, PHP_EOL . $stringToWrite);
 	fclose($handle);
 }
@@ -25,5 +25,5 @@ function logError($message) {
 	return logMessage('ERROR', $message);
 }
 
-logError("This is a 405 ERROR") . PHP_EOL;
-logInfo("here's a custom info message. greater reusability. woohoo!") . PHP_EOL;
+logError("here's the new ERROR message!") . PHP_EOL;
+logInfo("here's the new custom info message!") . PHP_EOL;
