@@ -3,6 +3,7 @@
 class Log 
 {
 	public $filename;
+	
 	public function logMessage($logLevel, $message) {
 		date_default_timezone_set('America/Chicago');
 		$todaysDate = date('Y-m-d');
