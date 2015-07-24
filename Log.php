@@ -3,22 +3,32 @@
 class Log 
 {
 	public $filename;
+	public $handle;
+
+	public function __construct($prefix = 'log')
+    { 
+    	$this->filename = 'txt/' . $prefix . '-' . date('Y-m-d') . '.log';
+		$this->handle = fopen($this->filename, 'a');
+    }
 	
 	public function logMessage($logLevel, $message) {
-		date_default_timezone_set('America/Chicago');
-		$todaysDate = date('Y-m-d');
-		$timeNow = date('H:i:s');
-		$stringToWrite = "$todaysDate $timeNow [{$logLevel}] $message"; 
-		$handle = fopen($this->filename, 'a');
-		fwrite($handle, PHP_EOL . $stringToWrite);
-		fclose($handle);
+		$stringToWrite = date('Y-m-d H:i:s') . "[{$logLevel}] $message"; 
+		fwrite($this->handle, PHP_EOL . $stringToWrite);
 	}
+		
+	public function __destruct()
+    {
+		fclose($this->handle);    	
+    }
 
-	public function info($message) {
+
+	public function info($message) 
+	{
 		return $this->logMessage('INFO', $message);
 	}	
 
-	public function error($message) {
+	public function error($message) 
+	{
 		return $this->logMessage('ERROR', $message);
 	}
 }
