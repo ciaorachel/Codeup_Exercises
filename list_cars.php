@@ -58,7 +58,22 @@ function trueOrFalse ($carDetails) {
 }
 
 
-print_r(list_cars($cars)) . PHP_EOL;
+//print_r(list_cars($cars)) . PHP_EOL;
 
+function addCars ($newCar) {
+	$newCar = 'Fiat 500' => array(
+		'year' => 2010
+		'doors' => 2,
+        'color' => 'blue',
+        'mileage' => 25000,
+        'sunroof' => false,
+        'convertible' => true,
+        'license' => 'PHP4LYFE',
+        );
+	array_push($car, $newCar);
+	print_r(list_cars($cars)) . PHP_EOL;
+}
+
+print_r(addCars($newCar) . PHP_EOL);
 
 ?>
