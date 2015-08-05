@@ -21,11 +21,11 @@ class Log
 			if (touch($this->filename) && is_writable($this->filename)) {
 				return TRUE;
 			} else {
-				die();
+				die("Died -- not writable..." . PHP_EOL);
 			}
 
 		} else {
-			die();
+			die("Died -- need string only please..." . PHP_EOL);
 		}
 		
 	}
