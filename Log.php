@@ -2,15 +2,44 @@
 
 class Log 
 {
-	public $filename;
-	public $handle;
+	private $filename;
+	private $handle;
 
 	public function __construct($prefix = 'log')
     { 
-    	$this->filename = 'txt/' . $prefix . '-' . date('Y-m-d') . '.log';
-		$this->handle = fopen($this->filename, 'a');
+    	if ($this->setFileName($prefix)) {
+			$this->handle = fopen($this->filename, 'a');
+		}
     }
 	
+	protected function setFileName ($prefix)
+	{
+		if (gettype($prefix) == 'string') {
+			$this->prefix = trim($prefix);
+			$this->filename = 'txt/' . $prefix . '-' . date('Y-m-d') . '.log';
+
+			if (touch($this->filename) && is_writable($this->filename)) {
+				return TRUE;
+			} else {
+				die();
+			}
+
+		} else {
+			die();
+		}
+		
+	}
+
+	public function getFileName()
+	{
+		return $this->filename;
+	}
+
+	public function getHandle()
+	{
+		return $this->handle;
+	}
+
 	public function logMessage($logLevel, $message) {
 		$stringToWrite = date('Y-m-d H:i:s') . "[{$logLevel}] $message"; 
 		fwrite($this->handle, PHP_EOL . $stringToWrite);
@@ -18,7 +47,9 @@ class Log
 		
 	public function __destruct()
     {
-		fclose($this->handle);    	
+		if (isset($this->handle)) {
+			fclose($this->handle);
+		}    	
     }
 
 
