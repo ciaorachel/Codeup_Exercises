@@ -4,6 +4,7 @@
 class Model
 {
 	private $attributes = array();
+	protected static $table;
 
 	public function __set($key, $value) 
 	{
@@ -16,6 +17,11 @@ class Model
 			return $this->attributes[$key];
 		}
 		return null;
+	}
+
+	public static function getTableName()
+	{
+		return static::$table;	
 	}
 }
 
@@ -47,6 +53,7 @@ echo $parkTwo->color . PHP_EOL; // returns as null b/c no color key/value in $pa
 echo $parkThree->name . PHP_EOL;
 echo $parkThree->state . PHP_EOL; // returns as null b/c no state key/value in $parkThree
 echo $parkThree->weather . PHP_EOL;
+
 
 
 //CLASS NOTES:
